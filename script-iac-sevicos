@@ -19,3 +19,9 @@ wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.z
 unzip main.zip
 cd linux-site-dio-main
 cp -R * /var/www/html/
+
+Salve o script acima em um arquivo, por exemplo, servicos.sh
+Dê permissão de execução ao script:
+chmod +x servicos.sh
+Executar o script
+./script-iac-sevicos
