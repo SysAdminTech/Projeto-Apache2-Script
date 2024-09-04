@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Atualizando o servidor..."
+
+### Verificar Atualizações
+apt-get update
+### Aplicar as atualizações
+apt-get upgrade -y
+### Instalar servidor web
+apt-get install apache2 -y
+### Instalar descompactador
+apt-get install unzip -y
+
+
+echo "Baixando e copiando os arquivos da aplicação..."
+
+cd /tmp
+wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
+unzip main.zip
+cd linux-site-dio-main
+cp -R * /var/www/html/
